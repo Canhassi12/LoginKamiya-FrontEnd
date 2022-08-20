@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body {
+    @apply bg-neutral-900
+}
+
+.login {
+    background: linear-gradient(to right, rgb(42, 42, 42) 7%, #6183ae 100%);
+
+    filter: drop-shadow(12px 12px 4px #030308);
+}
+
+.font {
+    font-family: "Fira Code";
+}
