@@ -23,8 +23,8 @@ export default function() {
         }
     });
     
-    fodase();
-    async function fodase() {
+    getUser();
+    async function getUser() {
         try {
             const response = await api.get('user', 
             {
@@ -46,15 +46,15 @@ export default function() {
             <div className="flex flex-row-reverse mr-1 mt-2">
                <Profile name={name} email={email}/>
 
-                <div className="flex justify-center w-full">
-                    <div className="flex items-center ">    
-                        <h1 className="text-white text-5xl font-[Poppins]">Congratulations</h1>  
+                <div className="flex justify-center w-full -z-30">
+                    <div className="flex items-center">    
+                        <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-[Poppins]">Congratulations</h1>  
                     </div>
                 </div>
             </div>
 
             <div className="flex justify-center mt-16">
-                <div className="text-white h-[800px] w-[600px] bg-zinc-800 flex justify-start pl-6 pt-3 flex-col gap-5">
+                <div className="text-white h-[600px] sm:h-[800px] w-[350px] sm:w-[600px]  bg-zinc-800 flex justify-start pl-6 pt-3 flex-col gap-5">
                     Expectation: 
                     <Design />
                     Reality: 
