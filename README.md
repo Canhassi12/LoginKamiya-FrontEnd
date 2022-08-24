@@ -6,6 +6,11 @@
 2. Open folder: `cd loginKamiya-FrontEnd`;
 3. Run project: `yarn start` or `npm run dev`;
 4. Open your browser in local host server: `http://127.0.0.1:####/` 
+5. Clone the backEnd repository: `git clone https://;github.com/Canhassi12/LoginKamiya-backEnd.git`;
+6. Open folder: `cd loginKamiya-backEnd`;
+7. Create a new database with name `'loginkamiya'`;
+8. Run database migrate: `php artisan migrate`;
+9. Run project: `php artisan serve`; 
 
 ## under development
 
