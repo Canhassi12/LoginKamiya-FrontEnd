@@ -1,21 +1,24 @@
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
-import api from "../services/api";
+import api from "../../services/api";
+import useForm from "./useForm";
 
 export default function FormLogin() {
-  const [email, setEmail] = useState("");
-
-  const [password, setPassword] = useState("");
 
   const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
+  const [form, handleForm] = useForm();
+
   async function handleClickLogin() {
+    let email = form.email;
+    let password = form.password;
+
     try {
       const response = await api.post("auth/login", {
         email,
-        password
+        password,
       });
       
       if(sessionStorage.getItem('token')) {
@@ -28,7 +31,7 @@ export default function FormLogin() {
       navigate('/app');
 
     } catch (error) {
-      setError(error.response.data);
+      setError(error.response.data)
     }
   }
 
@@ -44,15 +47,15 @@ export default function FormLogin() {
 
       <label className="">Email</label>
       <input
-        value={email}
-        onChange={event => setEmail(event.target.value)}
+        name="email"
+        onChange={handleForm}
         className="border-2 border-white text-black rounded"
         type="text"
         placeholder="Email"
         />
       <label className="">Password</label>
       <input
-        value={password} onChange={event => setPassword(event.target.value)}
+        name="password" onChange={handleForm}
         className="border-2 mt-1 border-white text-black rounded"
         type="password"
         placeholder="Password"

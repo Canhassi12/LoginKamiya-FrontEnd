@@ -1,19 +1,19 @@
 import { useState } from "react";
-import api from "../services/api";
+import api from "../../services/api";
 import { Navigate, useNavigate } from "react-router-dom";
+import useForm from "./useForm";
 
 export default function FormRegister() {
   const navigate = useNavigate();
 
-  const [name, setName] = useState("");
-
-  const [email, setEmail] = useState("");
-
-  const [password, setPassword] = useState("");
-
   const [error, setError] = useState('');
 
+  const [form, handleForm] = useForm();
+
   async function handleClick() {
+    let name = form.email;
+    let email = form.email;
+    let password = form.password;
     try {
       await api.post("register", {
         name,
@@ -36,20 +36,19 @@ export default function FormRegister() {
       </h2>
 
       
-      <input type="text" value={name} onChange={event => setName(event.target.value)}
+      <input type="text" name="name" onChange={handleForm}
       className="border-2 mt-6 border-white text-black rounded" placeholder="Name"
       />
 
       <input
-        value={email}
-        onChange={event => setEmail(event.target.value)}
+        name="email" onChange={handleForm}
         className="border-2 mt-6 border-white text-black rounded"
         type="text"
         placeholder="Email"
       />
 
       <input
-        value={password} onChange={event => setPassword(event.target.value)}
+        name="password" onChange={handleForm}
         className="border-2 mt-6 border-white text-black rounded"
         type="password"
         placeholder="Password"

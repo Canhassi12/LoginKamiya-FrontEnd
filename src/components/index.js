@@ -1,5 +1,5 @@
-export {default as FormLogin} from "./FormLogin";
-export {default as FormRegister} from "./FormRegister";
+export {default as FormLogin} from "./form/FormLogin";
+export {default as FormRegister} from "./form/FormRegister";
 export {default as Name} from "./Name";
 export {default as CodeBlock} from "./CodeBlock";
 export {default as Kamiya1} from "./Kamiya1";
