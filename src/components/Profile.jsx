@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import api from "../services/api";
-import Kamiya3 from "./Kamiya3";
+import Kamiya3 from "./imgs/Kamiya3";
 
 export default function Profile(user) {
 
