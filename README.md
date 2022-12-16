@@ -1,6 +1,6 @@
 # LoginKamiya-FrontEnd 🎌🥵
 
-## objective
+## Objective
 Do a project to practice the authentication process using PHP/Laravel, and I learned a few other things.
 ## Run this project steps
 
