@@ -1,5 +1,7 @@
 # LoginKamiya-FrontEnd 🎌🥵
 
+## objective
+Do a project to practice the authentication process using PHP/Laravel, and I learned a few other things.
 ## Run this project steps
 
 1. Clone this repository: `git clone https://github.com/Canhassi12/LoginKamiya-FrontEnd.git` ;
